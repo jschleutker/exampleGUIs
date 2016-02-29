@@ -4,13 +4,13 @@
  * Contact: fwilke@uos.de and jschleutker@uos.de
  */
 
-package complexExample.view;
+package de.uos.se.exampleGUIs.complexExample.view;
 
-import complexExample.controller.AddButtonListener;
-import complexExample.controller.DeleteButtonListener;
-import complexExample.controller.InputFieldListener;
-import complexExample.controller.MenuSaveListener;
-import complexExample.model.MyListModel;
+import de.uos.se.exampleGUIs.complexExample.controller.AddButtonListener;
+import de.uos.se.exampleGUIs.complexExample.controller.DeleteButtonListener;
+import de.uos.se.exampleGUIs.complexExample.controller.InputFieldListener;
+import de.uos.se.exampleGUIs.complexExample.controller.MenuSaveListener;
+import de.uos.se.exampleGUIs.complexExample.model.MyListModel;
 
 import javax.swing.*;
 import javax.swing.border.EmptyBorder;

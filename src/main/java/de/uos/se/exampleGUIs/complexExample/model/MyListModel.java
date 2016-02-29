@@ -4,7 +4,7 @@
  * Contact: fwilke@uos.de and jschleutker@uos.de
  */
 
-package complexExample.model;
+package de.uos.se.exampleGUIs.complexExample.model;
 
 import javax.swing.*;
 import javax.swing.event.ListDataEvent;

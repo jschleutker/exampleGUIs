@@ -4,46 +4,52 @@
  * Contact: fwilke@uos.de and jschleutker@uos.de
  */
 
-package complexExample.controller;
+package de.uos.se.exampleGUIs.complexExample.controller;
 
-import complexExample.model.MyListModel;
-import complexExample.view.GUI;
+import de.uos.se.exampleGUIs.complexExample.model.MyListModel;
+import de.uos.se.exampleGUIs.complexExample.view.GUI;
 
+import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 /**
  * @author Jan-Philipp Schleutker <jschleutker@uos.de>
  */
-public class DeleteButtonListener
+public class AddButtonListener
         implements ActionListener
 {
     private final MyListModel _model;
     private final GUI _gui;
 
     /**
-     * A new listener for the delete button.
+     * Create a controller instance for the add button.
      *
      * @param model
      *         The model which holds the data that may be changed by this class.
      * @param gui
      *         The GUI on which the data is displayed.
      */
-    public DeleteButtonListener(MyListModel model, GUI gui)
+    public AddButtonListener(MyListModel model, GUI gui)
     {
         this._model = model;
         this._gui = gui;
     }
 
     /**
-     * When the delete button is clicked check whether there are items selected. If so delete them in the model.
+     * Checks whether the content of the text field on the GUI is empty when trimmed. If not adds the content to the
+     * model.
      */
     @Override
     public void actionPerformed(ActionEvent e)
     {
-        if (! this._gui.getSelectedItems().isEmpty())
+        String s = this._gui.getTextFieldContent();
+        if (! s.trim().equals(""))
         {
-            this._model.remove(this._gui.getSelectedItems());
+            this._model.add(s);
         }
+
+        this._gui.clearTextField();
+        JOptionPane.showInputDialog(null, "blaaaaaa");
     }
 }

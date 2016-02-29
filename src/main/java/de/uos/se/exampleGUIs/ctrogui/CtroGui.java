@@ -4,7 +4,7 @@
  * Contact: fwilke@uos.de and jschleutker@uos.de
  */
 
-package ctrogui;
+package de.uos.se.exampleGUIs.ctrogui;
 
 import javax.swing.*;
 import javax.swing.border.EmptyBorder;

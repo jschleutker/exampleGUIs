@@ -4,10 +4,10 @@
  * Contact: fwilke@uos.de and jschleutker@uos.de
  */
 
-package complexExample.controller;
+package de.uos.se.exampleGUIs.complexExample.controller;
 
 
-import complexExample.view.GUI;
+import de.uos.se.exampleGUIs.complexExample.view.GUI;
 
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;

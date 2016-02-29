@@ -4,7 +4,7 @@
  * Contact: fwilke@uos.de and jschleutker@uos.de
  */
 
-package passwordGUI;
+package de.uos.se.exampleGUIs.passwordGUI;
 
 import javax.swing.*;
 import javax.swing.border.EmptyBorder;
