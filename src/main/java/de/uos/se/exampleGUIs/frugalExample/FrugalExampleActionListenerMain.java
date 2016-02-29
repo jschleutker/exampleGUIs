@@ -4,13 +4,11 @@
  * Contact: fwilke@uos.de and jschleutker@uos.de
  */
 
-package frugalExample;
+package de.uos.se.exampleGUIs.frugalExample;
 
 import javax.swing.*;
 import javax.swing.border.EmptyBorder;
 import java.awt.*;
-import java.awt.event.MouseAdapter;
-import java.awt.event.MouseEvent;
 
 /**
  * Created by sem on 14.12.2015.
@@ -19,7 +17,7 @@ import java.awt.event.MouseEvent;
  *
  * @author Jan-Philipp Schleutker <jschleutker@uos.de>
  */
-public class FrugalExampleMain
+public class FrugalExampleActionListenerMain
         extends JFrame
 {
 
@@ -31,7 +29,7 @@ public class FrugalExampleMain
     /**
      * Create the frame.
      */
-    private FrugalExampleMain()
+    private FrugalExampleActionListenerMain()
     {
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         setBounds(100, 100, 450, 300);
@@ -41,22 +39,17 @@ public class FrugalExampleMain
         setContentPane(contentPane);
 
         JPanel panel = new JPanel();
-        panel.setBackground(Color.WHITE);
+        panel.setBackground(Color.GREEN);
         contentPane.add(panel, BorderLayout.CENTER);
 
         JButton btnToggle = new JButton("toggle");
-        btnToggle.addMouseListener(new MouseAdapter()
-        {
-            @Override
-            public void mouseClicked(MouseEvent e)
+        btnToggle.addActionListener(e -> {
+            if (panel.getBackground() == Color.GREEN)
             {
-                if (panel.getBackground() == Color.BLACK)
-                {
-                    panel.setBackground(Color.WHITE);
-                } else
-                {
-                    panel.setBackground(Color.BLACK);
-                }
+                panel.setBackground(Color.DARK_GRAY);
+            } else
+            {
+                panel.setBackground(Color.GREEN);
             }
         });
         contentPane.add(btnToggle, BorderLayout.SOUTH);
@@ -71,7 +64,7 @@ public class FrugalExampleMain
         EventQueue.invokeLater(() -> {
             try
             {
-                FrugalExampleMain frame = new FrugalExampleMain();
+                FrugalExampleActionListenerMain frame = new FrugalExampleActionListenerMain();
                 frame.setVisible(true);
             } catch (Exception e)
             {
