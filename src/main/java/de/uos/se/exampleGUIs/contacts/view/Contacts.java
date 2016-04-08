@@ -7,7 +7,6 @@ import de.uos.se.exampleGUIs.contacts.model.PersonsModel;
 
 import javax.swing.*;
 import javax.swing.border.EmptyBorder;
-import javax.swing.table.TableRowSorter;
 import java.awt.*;
 
 /**
@@ -22,6 +21,7 @@ public class Contacts
      */
     private static final long serialVersionUID = - 1187431096814678063L;
     private final JList<Person> list;
+    private final JButton btnUpdate;
 
     /**
      * Create the frame.
@@ -46,9 +46,14 @@ public class Contacts
         contentPane.add(list);
 
         JButton btnDelete = new JButton("Delete");
-        btnDelete.setBounds(260, 728, 89, 23);
+        btnDelete.setBounds(274, 728, 89, 23);
         btnDelete.addActionListener(new DeleteButtonListener(personsModel, this));
         contentPane.add(btnDelete);
+
+        this.btnUpdate = new JButton("Update");
+        this.btnUpdate.setBounds(274, 150, 89, 23);
+        this.btnUpdate.addActionListener(new UpdateButtonListener(detailViewTblModel, personsModel, this));
+        contentPane.add(btnUpdate);
 
         JMenuBar menuBar = new JMenuBar();
         menuBar.setBounds(0, 0, 584, 21);
@@ -77,11 +82,15 @@ public class Contacts
         table.setFont(new Font("Tahoma", Font.PLAIN, 14));
         table.setBounds(274, 39, 300, 64);
         table.setModel(detailViewTblModel);
-        table.setRowSorter(new TableRowSorter<>(detailViewTblModel));
 
         contentPane.add(table);
     }
 
+    /**
+     * Returns the person currently selected in the list on the left.
+     *
+     * @return The currently selected person.
+     */
     public Person getSelectedPerson()
     {
         return this.list.getSelectedValue();

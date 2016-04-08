@@ -78,4 +78,12 @@ public class DetailViewTblModel
         throw new Error("Cannot happen.");
     }
 
+    @Override
+    public boolean isCellEditable(int row, int col)
+    {
+        if (col == 1)
+            return true;
+        return false;
+    }
+
 }
