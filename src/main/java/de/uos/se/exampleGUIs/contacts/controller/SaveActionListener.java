@@ -17,7 +17,7 @@ public class SaveActionListener
         implements ActionListener
 {
 
-    private PersonsModel personsModel;
+    private final PersonsModel personsModel;
 
     public SaveActionListener(PersonsModel personsModel)
     {

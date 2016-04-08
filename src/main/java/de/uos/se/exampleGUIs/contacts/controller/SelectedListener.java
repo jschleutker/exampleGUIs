@@ -15,8 +15,8 @@ public class SelectedListener
         implements ListSelectionListener
 {
 
-    private PersonsModel personsModel;
-    private DetailViewTblModel detailModel;
+    private final PersonsModel personsModel;
+    private final DetailViewTblModel detailModel;
 
     public SelectedListener(PersonsModel personsModel, DetailViewTblModel detailViewTableModel)
     {
@@ -27,7 +27,7 @@ public class SelectedListener
     @Override
     public void valueChanged(ListSelectionEvent arg0)
     {
-        JList<String> source = (JList) arg0.getSource();
+        @SuppressWarnings ("unchecked") JList<String> source = (JList<String>) arg0.getSource();
         int selectedIdx = source.getSelectedIndex();
         Person p = this.personsModel.getElementAt(selectedIdx);
         this.detailModel.setPerson(p);

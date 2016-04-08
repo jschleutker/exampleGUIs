@@ -14,7 +14,7 @@ public class NewActionListener
         implements ActionListener
 {
 
-    private PersonsModel model;
+    private final PersonsModel model;
 
     public NewActionListener(PersonsModel model)
     {

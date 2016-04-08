@@ -14,8 +14,8 @@ public class DeleteButtonListener
         implements ActionListener
 {
 
-    private PersonsModel personsModel;
-    private Contacts view;
+    private final PersonsModel personsModel;
+    private final Contacts view;
 
     public DeleteButtonListener(PersonsModel personsModel, Contacts contacts)
     {

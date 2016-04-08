@@ -21,33 +21,7 @@ public class Contacts
      *
      */
     private static final long serialVersionUID = - 1187431096814678063L;
-    private JPanel contentPane;
-    private JTable table;
-    private JList<Person> list;
-
-    private PersonsModel personsModel;
-    private DetailViewTblModel detailViewTblModel;
-
-    /**
-     * Launch the application.
-     */
-    public static void main(String[] args)
-    {
-        EventQueue.invokeLater(new Runnable()
-        {
-            public void run()
-            {
-                try
-                {
-                    Contacts frame = new Contacts();
-                    frame.setVisible(true);
-                } catch (Exception e)
-                {
-                    e.printStackTrace();
-                }
-            }
-        });
-    }
+    private final JList<Person> list;
 
     /**
      * Create the frame.
@@ -55,25 +29,25 @@ public class Contacts
     public Contacts()
     {
 
-        this.detailViewTblModel = new DetailViewTblModel();
-        this.personsModel = new PersonsModel();
+        DetailViewTblModel detailViewTblModel = new DetailViewTblModel();
+        PersonsModel personsModel = new PersonsModel();
 
-        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         setBounds(100, 100, 600, 800);
-        contentPane = new JPanel();
+        JPanel contentPane = new JPanel();
         contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
         setContentPane(contentPane);
         contentPane.setLayout(null);
 
         this.list = new JList<>();
         list.setBounds(10, 38, 240, 713);
-        list.setModel(this.personsModel);
+        list.setModel(personsModel);
         list.addListSelectionListener(new SelectedListener(personsModel, detailViewTblModel));
         contentPane.add(list);
 
         JButton btnDelete = new JButton("Delete");
         btnDelete.setBounds(260, 728, 89, 23);
-        btnDelete.addActionListener(new DeleteButtonListener(this.personsModel, this));
+        btnDelete.addActionListener(new DeleteButtonListener(personsModel, this));
         contentPane.add(btnDelete);
 
         JMenuBar menuBar = new JMenuBar();
@@ -84,14 +58,14 @@ public class Contacts
         menuBar.add(mnNewMenu);
 
         JMenuItem mntmNew = new JMenuItem("New...");
-        mntmNew.addActionListener(new NewActionListener(this.personsModel));
+        mntmNew.addActionListener(new NewActionListener(personsModel));
         mnNewMenu.add(mntmNew);
 
         JMenuItem mntmSave = new JMenuItem("Save");
-        mntmSave.addActionListener(new SaveActionListener(this.personsModel));
+        mntmSave.addActionListener(new SaveActionListener(personsModel));
 
         JMenuItem mntmLoad = new JMenuItem("Load");
-        mntmLoad.addActionListener(new LoadActionListener(this.personsModel));
+        mntmLoad.addActionListener(new LoadActionListener(personsModel));
 
         mnNewMenu.add(mntmLoad);
         mnNewMenu.add(mntmSave);
@@ -99,11 +73,11 @@ public class Contacts
         JMenuItem mntmExit = new JMenuItem("Exit");
         mnNewMenu.add(mntmExit);
 
-        table = new JTable();
+        JTable table = new JTable();
         table.setFont(new Font("Tahoma", Font.PLAIN, 14));
         table.setBounds(274, 39, 300, 64);
-        table.setModel(this.detailViewTblModel);
-        table.setRowSorter(new TableRowSorter<>(this.detailViewTblModel));
+        table.setModel(detailViewTblModel);
+        table.setRowSorter(new TableRowSorter<>(detailViewTblModel));
 
         contentPane.add(table);
     }

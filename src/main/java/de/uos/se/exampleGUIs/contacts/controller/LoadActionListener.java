@@ -17,7 +17,7 @@ public class LoadActionListener
         implements ActionListener
 {
 
-    private PersonsModel personsModel;
+    private final PersonsModel personsModel;
 
     public LoadActionListener(PersonsModel personsModel)
     {

@@ -9,6 +9,7 @@ import java.util.List;
 /**
  * @author Jan-Philipp Schleutker
  */
+@SuppressWarnings ("unused")
 @XmlRootElement (name = "contacts")
 public class PersonsModel
         extends AbstractListModel<Person>
