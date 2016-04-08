@@ -2,6 +2,9 @@ package de.uos.se.exampleGUIs.contacts.model;
 
 import javax.swing.table.AbstractTableModel;
 
+/**
+ * @author Jan-Philipp Schleutker
+ */
 public class DetailViewTblModel
         extends AbstractTableModel
 {

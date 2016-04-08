@@ -2,6 +2,9 @@ package de.uos.se.exampleGUIs.contacts.model;
 
 import javax.xml.bind.annotation.XmlElement;
 
+/**
+ * @author Jan-Philipp Schleutker
+ */
 @SuppressWarnings ("unused")
 public class Person
 {

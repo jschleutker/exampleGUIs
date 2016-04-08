@@ -8,7 +8,9 @@ import javax.swing.*;
 import javax.swing.event.ListSelectionEvent;
 import javax.swing.event.ListSelectionListener;
 
-
+/**
+ * @author Jan-Philipp Schleutker
+ */
 public class SelectedListener
         implements ListSelectionListener
 {

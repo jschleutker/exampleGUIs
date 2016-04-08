@@ -7,6 +7,9 @@ import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+/**
+ * @author Jan-Philipp Schleutker
+ */
 public class NewActionListener
         implements ActionListener
 {

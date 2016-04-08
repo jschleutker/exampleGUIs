@@ -10,6 +10,9 @@ import javax.swing.border.EmptyBorder;
 import javax.swing.table.TableRowSorter;
 import java.awt.*;
 
+/**
+ * @author Jan-Philipp Schleutker
+ */
 public class Contacts
         extends JFrame
 {

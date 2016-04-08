@@ -6,6 +6,9 @@ import javax.xml.bind.annotation.XmlRootElement;
 import java.util.LinkedList;
 import java.util.List;
 
+/**
+ * @author Jan-Philipp Schleutker
+ */
 @XmlRootElement (name = "contacts")
 public class PersonsModel
         extends AbstractListModel<Person>

@@ -10,7 +10,9 @@ import javax.xml.bind.Unmarshaller;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-
+/**
+ * @author Jan-Philipp Schleutker
+ */
 public class LoadActionListener
         implements ActionListener
 {

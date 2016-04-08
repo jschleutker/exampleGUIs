@@ -10,6 +10,9 @@ import javax.xml.bind.Marshaller;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+/**
+ * @author Jan-Philipp Schleutker
+ */
 public class SaveActionListener
         implements ActionListener
 {

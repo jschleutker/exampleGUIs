@@ -7,7 +7,9 @@ import de.uos.se.exampleGUIs.contacts.view.Contacts;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-
+/**
+ * @author Jan-Philipp Schleutker
+ */
 public class DeleteButtonListener
         implements ActionListener
 {

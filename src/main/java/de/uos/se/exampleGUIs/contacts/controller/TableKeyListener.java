@@ -6,7 +6,9 @@ import de.uos.se.exampleGUIs.contacts.view.Contacts;
 import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
 
-
+/**
+ * @author Jan-Philipp Schleutker
+ */
 public class TableKeyListener
         extends KeyAdapter
 {
