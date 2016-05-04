@@ -62,7 +62,7 @@ public class PasswordGUI
       btnPopup.addActionListener(e -> {
          int i = JOptionPane.showConfirmDialog(contentPane, "Password: "+String.valueOf(passwordField.getPassword()));
          if(i==JOptionPane.OK_OPTION)
-            System.out.println("Printing password was yes, YAY!");
+            System.out.println("Clicked OK on popup");
       });
 
       btnNewButton.addActionListener(new ActionListener() {
