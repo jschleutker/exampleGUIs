@@ -12,6 +12,8 @@ import java.awt.event.ActionListener;
 
 /**
  * @author Jan-Philipp Schleutker
+ *         <p>
+ *         Listener that acts upon loading a file to display its contents.
  */
 public class LoadActionListener
         implements ActionListener
@@ -19,11 +21,20 @@ public class LoadActionListener
 
     private final PersonsModel personsModel;
 
+    /**
+     * A new listener that holds the corresponding model.
+     *
+     * @param personsModel
+     *         The corresponding model.
+     */
     public LoadActionListener(PersonsModel personsModel)
     {
         this.personsModel = personsModel;
     }
 
+    /**
+     * Loads the XML file and cares its contents are displayed.
+     */
     @Override
     public void actionPerformed(ActionEvent arg0)
     {

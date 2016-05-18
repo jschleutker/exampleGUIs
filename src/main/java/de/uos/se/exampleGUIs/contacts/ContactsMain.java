@@ -9,6 +9,9 @@ import java.awt.*;
  */
 public class ContactsMain
 {
+    /**
+     * Invokes everything in the EDT since Swing isn't thread-safe.
+     */
     public static void main(String[] args)
     {
         EventQueue.invokeLater(() -> {

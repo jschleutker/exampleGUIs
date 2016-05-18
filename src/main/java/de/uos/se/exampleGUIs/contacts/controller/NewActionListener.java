@@ -9,6 +9,8 @@ import java.awt.event.ActionListener;
 
 /**
  * @author Jan-Philipp Schleutker
+ *         <p>
+ *         Listener that is trggered after a new person was created.
  */
 public class NewActionListener
         implements ActionListener
@@ -16,11 +18,20 @@ public class NewActionListener
 
     private final PersonsModel model;
 
+    /**
+     * A new instance that holds a model.
+     *
+     * @param model
+     *         The corresponding model.
+     */
     public NewActionListener(PersonsModel model)
     {
         this.model = model;
     }
 
+    /**
+     * Shows the person on an option panes and awaits confirmation. After positive confirmation adds it to the model.
+     */
     @Override
     public void actionPerformed(ActionEvent arg0)
     {

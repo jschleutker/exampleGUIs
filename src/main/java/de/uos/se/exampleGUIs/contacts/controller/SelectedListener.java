@@ -11,6 +11,8 @@ import javax.swing.event.ListSelectionListener;
 
 /**
  * @author Jan-Philipp Schleutker
+ *         <p>
+ *         Listens when something on the list to display the persons changed.
  */
 public class SelectedListener
         implements ListSelectionListener
@@ -20,6 +22,16 @@ public class SelectedListener
     private final DetailViewTblModel detailModel;
     private final Contacts view;
 
+    /**
+     * Creates a new instance.
+     *
+     * @param personsModel
+     *         The corresponding model.
+     * @param detailViewTableModel
+     *         The table to show the details of a selected list entry.
+     * @param view
+     *         The view which contains all the widgets.
+     */
     public SelectedListener(PersonsModel personsModel, DetailViewTblModel detailViewTableModel, Contacts view)
     {
         this.personsModel = personsModel;
@@ -27,6 +39,10 @@ public class SelectedListener
         this.view = view;
     }
 
+    /**
+     * After a person was selected in the list, their details are shown in the detail view and enables the button that triggers changes to be made permanently.
+     * When no person is selected (anymore) the button gets disabled and the detail view is empty.
+     */
     @Override
     public void valueChanged(ListSelectionEvent arg0)
     {

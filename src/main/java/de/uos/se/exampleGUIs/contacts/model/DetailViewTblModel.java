@@ -4,6 +4,8 @@ import javax.swing.table.AbstractTableModel;
 
 /**
  * @author Jan-Philipp Schleutker
+ *         <p>
+ *         A model for the detail view which shows all information about a person.
  */
 public class DetailViewTblModel
         extends AbstractTableModel
@@ -11,14 +13,14 @@ public class DetailViewTblModel
 
     private Person currentPerson;
 
+    /**
+     * Create a new instance with the current person to display set to null.
+     */
     public DetailViewTblModel()
     {
         this.currentPerson = null;
     }
 
-    /**
-     *
-     */
     private static final long serialVersionUID = - 8459432140350902413L;
 
     public void setPerson(Person p)
@@ -27,18 +29,27 @@ public class DetailViewTblModel
         this.fireTableDataChanged();
     }
 
+    /**
+     * {@inheritDoc}
+     */
     @Override
     public int getColumnCount()
     {
         return 2;
     }
 
+    /**
+     * {@inheritDoc}
+     */
     @Override
     public int getRowCount()
     {
         return 4;
     }
 
+    /**
+     * {@inheritDoc}
+     */
     @Override
     public Object getValueAt(int row, int column)
     {
@@ -78,6 +89,9 @@ public class DetailViewTblModel
         throw new Error("Cannot happen.");
     }
 
+    /**
+     * {@inheritDoc}
+     */
     @Override
     public boolean isCellEditable(int row, int col)
     {

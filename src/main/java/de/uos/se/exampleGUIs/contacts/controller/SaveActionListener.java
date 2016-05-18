@@ -12,6 +12,8 @@ import java.awt.event.ActionListener;
 
 /**
  * @author Jan-Philipp Schleutker
+ *         <p>
+ *         Listener that handles saving the data into a XML file by JAXB.
  */
 public class SaveActionListener
         implements ActionListener
@@ -19,11 +21,20 @@ public class SaveActionListener
 
     private final PersonsModel personsModel;
 
+    /**
+     * A new instance that holds the corresponding model.
+     *
+     * @param personsModel
+     *         The corresponding model.
+     */
     public SaveActionListener(PersonsModel personsModel)
     {
         this.personsModel = personsModel;
     }
 
+    /**
+     * After a action was performed the content of the model is written out by the JAXB mechanism into a XML-file.
+     */
     @Override
     public void actionPerformed(ActionEvent arg0)
     {

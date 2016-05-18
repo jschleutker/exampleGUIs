@@ -13,14 +13,12 @@ import java.awt.event.KeyEvent;
 
 /**
  * @author Jan-Philipp Schleutker
+ *         <p>
+ *         The view class for the contacts. Hold several widgets to display and manipulate data.
  */
 public class Contacts
         extends JFrame
 {
-
-    /**
-     *
-     */
     private static final long serialVersionUID = - 1187431096814678063L;
     private final JList<Person> list;
     private final JButton btnUpdate;
@@ -62,6 +60,7 @@ public class Contacts
         contentPane.add(list);
 
         this.btnUpdate = new JButton("Update");
+        this.btnUpdate.setName("update_button");
         this.btnUpdate.setBounds(274, 150, 89, 23);
         this.btnUpdate.addActionListener(new UpdateButtonListener(detailViewTblModel, personsModel, this, this.list));
         contentPane.add(btnUpdate);
@@ -108,6 +107,11 @@ public class Contacts
         return this.list.getSelectedValue();
     }
 
+    /**
+     * Get the {@link JButton} to update contact information.
+     *
+     * @return The button as described above.
+     */
     public JButton getBtnUpdate()
     {
         return this.btnUpdate;
