@@ -14,10 +14,6 @@ import java.util.List;
 public class PersonsModel
         extends AbstractListModel<Person>
 {
-
-    /**
-     *
-     */
     private static final long serialVersionUID = - 6682977301079315975L;
     private List<Person> persons;
 

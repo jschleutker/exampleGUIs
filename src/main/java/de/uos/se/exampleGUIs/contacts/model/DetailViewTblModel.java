@@ -81,9 +81,7 @@ public class DetailViewTblModel
     @Override
     public boolean isCellEditable(int row, int col)
     {
-        if (col == 1)
-            return true;
-        return false;
+        return col == 1;
     }
 
 }

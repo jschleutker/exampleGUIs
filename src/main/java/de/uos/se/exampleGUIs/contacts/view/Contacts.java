@@ -8,6 +8,8 @@ import de.uos.se.exampleGUIs.contacts.model.PersonsModel;
 import javax.swing.*;
 import javax.swing.border.EmptyBorder;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.KeyEvent;
 
 /**
  * @author Jan-Philipp Schleutker
@@ -42,18 +44,28 @@ public class Contacts
         this.list = new JList<>();
         list.setBounds(10, 38, 240, 713);
         list.setModel(personsModel);
-        list.addListSelectionListener(new SelectedListener(personsModel, detailViewTblModel));
+        list.addListSelectionListener(new SelectedListener(personsModel, detailViewTblModel, this));
+        list.getInputMap().put(KeyStroke.getKeyStroke(KeyEvent.VK_DELETE, 0), "del");
+        list.getActionMap().put("del", new AbstractAction()
+        {
+            @Override
+            public void actionPerformed(ActionEvent e)
+            {
+                final int selectedIndex = list.getSelectedIndex();
+                if (selectedIndex > - 1)
+                {
+                    PersonsModel model = (PersonsModel) list.getModel();
+                    model.deletePerson(model.getElementAt(selectedIndex));
+                }
+            }
+        });
         contentPane.add(list);
-
-        JButton btnDelete = new JButton("Delete");
-        btnDelete.setBounds(274, 728, 89, 23);
-        btnDelete.addActionListener(new DeleteButtonListener(personsModel, this));
-        contentPane.add(btnDelete);
 
         this.btnUpdate = new JButton("Update");
         this.btnUpdate.setBounds(274, 150, 89, 23);
-        this.btnUpdate.addActionListener(new UpdateButtonListener(detailViewTblModel, personsModel, this));
+        this.btnUpdate.addActionListener(new UpdateButtonListener(detailViewTblModel, personsModel, this, this.list));
         contentPane.add(btnUpdate);
+        this.btnUpdate.setEnabled(false);
 
         JMenuBar menuBar = new JMenuBar();
         menuBar.setBounds(0, 0, 584, 21);
@@ -94,5 +106,10 @@ public class Contacts
     public Person getSelectedPerson()
     {
         return this.list.getSelectedValue();
+    }
+
+    public JButton getBtnUpdate()
+    {
+        return this.btnUpdate;
     }
 }

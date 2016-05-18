@@ -30,6 +30,7 @@ public class ComplexExampleMain
      */
     public static void main(String[] args)
     {
+        System.out.println("main start");
         EventQueue.invokeLater(() -> {
             try
             {
@@ -40,5 +41,6 @@ public class ComplexExampleMain
                 e.printStackTrace();
             }
         });
+        System.out.println("main end");
     }
 }
