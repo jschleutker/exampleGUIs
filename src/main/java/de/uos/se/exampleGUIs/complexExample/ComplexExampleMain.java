@@ -30,7 +30,6 @@ public class ComplexExampleMain
      */
     public static void main(String[] args)
     {
-        System.out.println("main start");
         EventQueue.invokeLater(new Runnable()
         {
             @Override
@@ -46,6 +45,5 @@ public class ComplexExampleMain
                 }
             }
         });
-        System.out.println("main end");
     }
 }
