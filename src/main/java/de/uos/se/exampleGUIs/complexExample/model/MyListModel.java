@@ -124,8 +124,11 @@ public class MyListModel
     public void add(String s)
     {
         this._list.add(s);
-        this._listDataListener.forEach(
-                l -> l.contentsChanged(new ListDataEvent(this, ListDataEvent.INTERVAL_ADDED, 0, this._list.size())));
+        for (ListDataListener listDataListener : this._listDataListener)
+        {
+            listDataListener
+                    .contentsChanged(new ListDataEvent(this, ListDataEvent.INTERVAL_ADDED, 0, this._list.size()));
+        }
     }
 
     /**
@@ -137,8 +140,11 @@ public class MyListModel
     public void remove(Collection<String> c)
     {
         this._list.removeAll(c);
-        this._listDataListener.forEach(
-                l -> l.contentsChanged(new ListDataEvent(this, ListDataEvent.INTERVAL_REMOVED, 0, this._list.size())));
+        for (ListDataListener listDataListener : this._listDataListener)
+        {
+            listDataListener
+                    .contentsChanged(new ListDataEvent(this, ListDataEvent.INTERVAL_REMOVED, 0, this._list.size()));
+        }
     }
 
 }

@@ -1,7 +1,5 @@
 package de.uos.se.exampleGUIs.contacts.model;
 
-import com.sun.istack.internal.NotNull;
-
 import javax.xml.bind.annotation.XmlElement;
 
 /**
@@ -32,7 +30,7 @@ public class Person
      * @param phone
      *         The phone number of the person.
      */
-    public Person(@NotNull String firstName, @NotNull String lastName, String email, String phone)
+    public Person(String firstName, String lastName, String email, String phone)
     {
         if (firstName == null || lastName == null)
         {
