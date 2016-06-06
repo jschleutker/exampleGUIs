@@ -17,6 +17,7 @@ import java.awt.event.KeyEvent;
 /**
  * A GUI which consists of a password field, button and label. The text typed in the password field will be shown on the label upon a mouse click on the button or if enter was pressed.
  *
+ *
  * @author Jan-Philipp Schleutker (jschleutker@uos.de)
  */
 
