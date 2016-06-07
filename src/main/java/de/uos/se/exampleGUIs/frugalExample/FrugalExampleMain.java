@@ -68,14 +68,19 @@ public class FrugalExampleMain
      */
     public static void main(String[] args)
     {
-        EventQueue.invokeLater(() -> {
-            try
+        EventQueue.invokeLater(new Runnable()
+        {
+            @Override
+            public void run()
             {
-                FrugalExampleMain frame = new FrugalExampleMain();
-                frame.setVisible(true);
-            } catch (Exception e)
-            {
-                e.printStackTrace();
+                try
+                {
+                    FrugalExampleMain frame = new FrugalExampleMain();
+                    frame.setVisible(true);
+                } catch (Exception e)
+                {
+                    e.printStackTrace();
+                }
             }
         });
     }

@@ -30,17 +30,20 @@ public class ComplexExampleMain
      */
     public static void main(String[] args)
     {
-        System.out.println("main start");
-        EventQueue.invokeLater(() -> {
-            try
+        EventQueue.invokeLater(new Runnable()
+        {
+            @Override
+            public void run()
             {
-                GUI frame = new GUI(new MyListModel(Files.createTempFile("listfile", null)));
-                frame.setVisible(true);
-            } catch (Exception e)
-            {
-                e.printStackTrace();
+                try
+                {
+                    GUI frame = new GUI(new MyListModel(Files.createTempFile("listfile", null)));
+                    frame.setVisible(true);
+                } catch (Exception e)
+                {
+                    e.printStackTrace();
+                }
             }
         });
-        System.out.println("main end");
     }
 }

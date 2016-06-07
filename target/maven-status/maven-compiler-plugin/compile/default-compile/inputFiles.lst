@@ -3,7 +3,6 @@ C:\Users\sem\Documents\exampleGUIs\src\main\java\de\uos\se\exampleGUIs\contacts\
 C:\Users\sem\Documents\exampleGUIs\src\main\java\de\uos\se\exampleGUIs\contacts\view\Contacts.java
 C:\Users\sem\Documents\exampleGUIs\src\main\java\de\uos\se\exampleGUIs\complexExample\controller\MenuSaveListener.java
 C:\Users\sem\Documents\exampleGUIs\src\main\java\de\uos\se\exampleGUIs\frugalExample\FrugalExampleActionListenerMain.java
-C:\Users\sem\Documents\exampleGUIs\src\main\java\de\uos\se\exampleGUIs\contacts\controller\DeleteButtonListener.java
 C:\Users\sem\Documents\exampleGUIs\src\main\java\de\uos\se\exampleGUIs\complexExample\model\MyListModel.java
 C:\Users\sem\Documents\exampleGUIs\src\main\java\de\uos\se\exampleGUIs\passwordGUI\PasswordGUI.java
 C:\Users\sem\Documents\exampleGUIs\src\main\java\de\uos\se\exampleGUIs\contacts\controller\SelectedListener.java
@@ -11,9 +10,9 @@ C:\Users\sem\Documents\exampleGUIs\src\main\java\de\uos\se\exampleGUIs\complexEx
 C:\Users\sem\Documents\exampleGUIs\src\main\java\de\uos\se\exampleGUIs\contacts\controller\LoadActionListener.java
 C:\Users\sem\Documents\exampleGUIs\src\main\java\de\uos\se\exampleGUIs\contacts\controller\SaveActionListener.java
 C:\Users\sem\Documents\exampleGUIs\src\main\java\de\uos\se\exampleGUIs\complexExample\ComplexExampleMain.java
+C:\Users\sem\Documents\exampleGUIs\src\main\java\de\uos\se\exampleGUIs\contacts\ContactsMain.java
 C:\Users\sem\Documents\exampleGUIs\src\main\java\de\uos\se\exampleGUIs\complexExample\view\GUI.java
 C:\Users\sem\Documents\exampleGUIs\src\main\java\de\uos\se\exampleGUIs\complexExample\controller\AddButtonListener.java
-C:\Users\sem\Documents\exampleGUIs\src\main\java\de\uos\se\exampleGUIs\contacts\Main.java
 C:\Users\sem\Documents\exampleGUIs\src\main\java\de\uos\se\exampleGUIs\contacts\model\Person.java
 C:\Users\sem\Documents\exampleGUIs\src\main\java\de\uos\se\exampleGUIs\ctrogui\CtroGui.java
 C:\Users\sem\Documents\exampleGUIs\src\main\java\de\uos\se\exampleGUIs\contacts\controller\NewActionListener.java

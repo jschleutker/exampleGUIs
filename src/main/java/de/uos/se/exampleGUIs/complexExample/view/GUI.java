@@ -42,6 +42,7 @@ public class GUI
      */
     public GUI(MyListModel model)
     {
+        this.setTitle("No lambdas");
         this._model = model;
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         setBounds(100, 100, 600, 800);
