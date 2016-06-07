@@ -60,10 +60,16 @@ public class PasswordGUI
       JButton btnPopup = new JButton("Show Me as Popup!");
       btnPopup.setBounds(273, 53, 159, 30);
       contentPane.add(btnPopup);
-      btnPopup.addActionListener(e -> {
-         int i = JOptionPane.showConfirmDialog(contentPane, "Password: "+String.valueOf(passwordField.getPassword()));
-         if(i==JOptionPane.OK_OPTION)
-            System.out.println("Clicked OK on popup");
+      btnPopup.addActionListener(new ActionListener()
+      {
+         @Override
+         public void actionPerformed(ActionEvent e)
+         {
+            int i = JOptionPane
+                    .showConfirmDialog(contentPane, "Password: " + String.valueOf(passwordField.getPassword()));
+            if (i == JOptionPane.OK_OPTION)
+               System.out.println("Clicked OK on popup");
+         }
       });
 
       btnNewButton.addActionListener(new ActionListener() {
@@ -88,12 +94,19 @@ public class PasswordGUI
     * Launch the application.
     */
    public static void main(String[] args) {
-      EventQueue.invokeLater(() -> {
-         try {
-            PasswordGUI frame = new PasswordGUI();
-            frame.setVisible(true);
-         } catch (Exception e) {
-            e.printStackTrace();
+      EventQueue.invokeLater(new Runnable()
+      {
+         @Override
+         public void run()
+         {
+            try
+            {
+               PasswordGUI frame = new PasswordGUI();
+               frame.setVisible(true);
+            } catch (Exception e)
+            {
+               e.printStackTrace();
+            }
          }
       });
    }

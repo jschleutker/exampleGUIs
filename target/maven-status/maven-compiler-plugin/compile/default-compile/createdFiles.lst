@@ -9,6 +9,7 @@ de\uos\se\exampleGUIs\passwordGUI\PasswordGUI.class
 de\uos\se\exampleGUIs\contacts\ContactsMain.class
 de\uos\se\exampleGUIs\contacts\controller\NewActionListener.class
 de\uos\se\exampleGUIs\frugalExample\FrugalExampleMain.class
+de\uos\se\exampleGUIs\complexExample\ComplexExampleMain$1.class
 de\uos\se\exampleGUIs\frugalExample\FrugalExampleMain$1.class
 de\uos\se\exampleGUIs\frugalExample\FrugalExampleActionListenerMain.class
 de\uos\se\exampleGUIs\complexExample\controller\InputFieldListener.class

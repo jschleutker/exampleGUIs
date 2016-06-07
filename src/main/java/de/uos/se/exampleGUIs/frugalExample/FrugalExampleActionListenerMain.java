@@ -9,6 +9,8 @@ package de.uos.se.exampleGUIs.frugalExample;
 import javax.swing.*;
 import javax.swing.border.EmptyBorder;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 /**
  * Created by sem on 14.12.2015.
@@ -43,13 +45,18 @@ public class FrugalExampleActionListenerMain
         contentPane.add(panel, BorderLayout.CENTER);
 
         JButton btnToggle = new JButton("toggle");
-        btnToggle.addActionListener(e -> {
-            if (panel.getBackground() == Color.GREEN)
+        btnToggle.addActionListener(new ActionListener()
+        {
+            @Override
+            public void actionPerformed(ActionEvent e)
             {
-                panel.setBackground(Color.DARK_GRAY);
-            } else
-            {
-                panel.setBackground(Color.GREEN);
+                if (panel.getBackground() == Color.GREEN)
+                {
+                    panel.setBackground(Color.DARK_GRAY);
+                } else
+                {
+                    panel.setBackground(Color.GREEN);
+                }
             }
         });
         contentPane.add(btnToggle, BorderLayout.SOUTH);
@@ -61,14 +68,19 @@ public class FrugalExampleActionListenerMain
      */
     public static void main(String[] args)
     {
-        EventQueue.invokeLater(() -> {
-            try
+        EventQueue.invokeLater(new Runnable()
+        {
+            @Override
+            public void run()
             {
-                FrugalExampleActionListenerMain frame = new FrugalExampleActionListenerMain();
-                frame.setVisible(true);
-            } catch (Exception e)
-            {
-                e.printStackTrace();
+                try
+                {
+                    FrugalExampleActionListenerMain frame = new FrugalExampleActionListenerMain();
+                    frame.setVisible(true);
+                } catch (Exception e)
+                {
+                    e.printStackTrace();
+                }
             }
         });
     }

@@ -9,6 +9,8 @@ package de.uos.se.exampleGUIs.ctrogui;
 import javax.swing.*;
 import javax.swing.border.EmptyBorder;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.util.concurrent.ThreadLocalRandom;
 
 /**
@@ -55,13 +57,23 @@ public class CtroGui
         System.out.println(i);
         if (i % 2 == 0)
         {
-            btnA.addActionListener(e -> {
-                throw new IllegalArgumentException("That was wrong!");
+            btnA.addActionListener(new ActionListener()
+            {
+                @Override
+                public void actionPerformed(ActionEvent e)
+                {
+                    throw new IllegalArgumentException("That was wrong!");
+                }
             });
         } else
         {
-            btnB.addActionListener(e -> {
-                throw new IllegalArgumentException("That was wrong!");
+            btnB.addActionListener(new ActionListener()
+            {
+                @Override
+                public void actionPerformed(ActionEvent e)
+                {
+                    throw new IllegalArgumentException("That was wrong!");
+                }
             });
         }
     }
@@ -71,14 +83,19 @@ public class CtroGui
      */
     public static void main(String[] args)
     {
-        EventQueue.invokeLater(() -> {
-            try
+        EventQueue.invokeLater(new Runnable()
+        {
+            @Override
+            public void run()
             {
-                CtroGui frame = new CtroGui();
-                frame.setVisible(true);
-            } catch (Exception e)
-            {
-                e.printStackTrace();
+                try
+                {
+                    CtroGui frame = new CtroGui();
+                    frame.setVisible(true);
+                } catch (Exception e)
+                {
+                    e.printStackTrace();
+                }
             }
         });
     }
