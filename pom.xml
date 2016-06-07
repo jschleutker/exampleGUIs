@@ -6,7 +6,7 @@
 
     <groupId>de.uos.se</groupId>
     <artifactId>exampleGUIs</artifactId>
-    <version>1.11</version>
+    <version>0.5</version>
 
     <build>
         <plugins>
